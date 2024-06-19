@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 
 const Private = () => {
   return (
-    <div className="w-60 flex flex-col flex-wrap items-center justify-center rounded-lg shadow-md cursor-pointer transition-all hover:scale-105 hover:opacity-90">
-      <div className="text-viridian-green-100 p-6 w-full bg-viridian-green-500 text-2xl rounded-t-md flex flex-wrap gap-3 items-center">
-        <div className="rounded-full p-3 bg-viridian-green-50 text-viridian-green-500">
+    <div className="w-56 flex flex-col flex-wrap items-center justify-center rounded-lg shadow-md cursor-pointer transition-all hover:scale-105 hover:opacity-90">
+      <div className="text-viridian-green-100 p-6 w-full bg-viridian-green-500 dark:bg-viridian-green-600 text-2xl rounded-t-md flex flex-wrap gap-3 items-center">
+        <div className="rounded-full p-3 bg-viridian-green-50 text-viridian-green-500 dark:bg-rock-blue-950 dark:text-viridian-green-50">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -24,10 +24,10 @@ const Private = () => {
           Privada: <span className="font-light">valle oriental</span>
         </p>
       </div>
-      <div className="bg-viridian-green-50 w-full p-4 flex justify-center">
+      <div className="bg-viridian-green-50 dark:bg-rock-blue-950 w-full p-4 flex justify-center">
         <Link
           to="/"
-          className="p-2 hover:bg-viridian-green-100 text-viridian-green-400 flex items-center gap-2 rounded-sm border border-viridian-green-400"
+          className="p-2 hover:bg-viridian-green-100 text-viridian-green-400 flex items-center gap-2 rounded-sm border border-viridian-green-400 dark:bg-viridian-green-600 dark:text-viridian-green-50"
         >
           Ver detalles
           <svg

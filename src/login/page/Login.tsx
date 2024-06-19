@@ -14,15 +14,15 @@ const Login = () => {
     <div className="container-login md:flex">
       <div className="bg-zuccini-950 flex items-center justify-center">
         <figure>
-          <img className="img-login" src={Logo} alt="logo" />
+          <img className="img-login" src={Logo} alt="logo" loading="lazy" />
         </figure>
       </div>
-      <div className="md:w-4/4 w-100-vw lg:w-[100vw] h-screen">
+      <div className="md:w-4/4 w-100-vw lg:w-[100vw] h-screen dark:bg-rock-blue-950">
         <form
           onSubmit={handleLoginSubmit}
           className="flex flex-col md:w-2/3 h-2/3 items-center justify-center mt-[9rem] mx-auto gap-4"
         >
-          <div>
+          <div className="dark:text-viridian-green-50">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -39,7 +39,7 @@ const Login = () => {
             </svg>
           </div>
           <div className="flex flex-col w-4/6">
-            <label htmlFor="email" className="p-1">
+            <label htmlFor="email" className="p-1 dark:text-viridian-green-50">
               Correo
             </label>
             <input
@@ -50,7 +50,7 @@ const Login = () => {
             />
           </div>
           <div className="flex flex-col w-4/6">
-            <label htmlFor="password" className="p-1">
+            <label htmlFor="password" className="p-1 dark:text-viridian-green-50">
               Contraseña
             </label>
             <input
@@ -69,7 +69,7 @@ const Login = () => {
               />
               <span className="slider"></span>
             </label>
-            <span>Mostrar contraseña</span>
+            <span className="dark:text-viridian-green-50">Mostrar contraseña</span>
           </div>
 
           <button

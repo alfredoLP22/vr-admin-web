@@ -13,3 +13,27 @@ body {
     color: #ddeae4;
     background-color: #3e6357;
 }
+html.dark .ant-popover-inner, html.dark .ant-popover-arrow:before {
+    background-color: #2d3139 !important;
+}
+
+::-webkit-scrollbar {
+    /* Customize the scrollbar width */
+    width: .6rem;
+    height: .6rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #bbd4c9;
+    border-radius: .2rem;
+}
+    
+::-webkit-scrollbar-thumb {
+        background: #0c6f45;
+        border-radius: .6rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #088d53;
+    border-radius: .6rem;
+}

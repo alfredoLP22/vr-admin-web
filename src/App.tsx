@@ -1,11 +1,35 @@
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Login from "./login/components/Login";
-import Dashboard from "./dashboard/page/Dashboard";
-import RouteProtected from "./private/Layout/RouteProtected";
-import Privates from "./privates/page/Privates";
+import type { RootState } from "./app/store";
+import Login from "./login/page/Login";
+import Dashboard from "./private/pages/Dashboard/page/Dashboard";
+import RouteProtected from "./private/layout/RouteProtected";
+import Privates from "./private/pages/Privates/page/Privates";
+import MyPayments from "./private/pages/MyPayments/page/MyPayments";
+import Residents from "./private/pages/Residents/page/Residents";
+import GenerateTicket from "./private/pages/GenerateTicket/page/GenerateTicket";
+import PayMaintenance from "./private/pages/PayMaintenance/page/PayMaintenance";
+import Expenses from "./private/pages/Expenses/page/Expenses";
 
 function App() {
+  // const [darkMode, setDarkMode] = useState(() => {
+  //   const savedMode = localStorage.getItem("dark-mode");
+  //   return savedMode ? JSON.parse(savedMode) : false;
+  // });
+
+  const darkModeStore = useSelector((state: RootState) => state.user.darkMode);
+
+  useEffect(() => {
+    if (darkModeStore) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("dark-mode", JSON.stringify(darkModeStore));
+  }, [darkModeStore]);
+
   return (
     <BrowserRouter>
       <Routes>
@@ -15,7 +39,12 @@ function App() {
 
         <Route path="/admin" element={<RouteProtected />}>
           <Route index element={<Dashboard />}/>
-          <Route path="privates" element={<Privates />}/>
+          <Route path="mis-pagos" element={<MyPayments />}/>
+          <Route path="privadas" element={<Privates />}/>
+          <Route path="residentes" element={<Residents />}/>
+          <Route path="generar-recibos" element={<GenerateTicket />}/>
+          <Route path="egresos" element={<Expenses />}/>
+          <Route path="pagar-mantenimiento" element={<PayMaintenance />}/>
         </Route>
       </Routes>
     </BrowserRouter>
