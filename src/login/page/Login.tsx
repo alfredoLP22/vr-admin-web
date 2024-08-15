@@ -6,7 +6,7 @@ import BackGround from "../components/BackGround";
 const Login: React.FC = () => {
 
   return (
-    <div className="container-login flex-col md:flex">
+    <div className="container-login flex-col md:flex-row">
       <BackGround />
       <div className="md:w-4/4 w-100-vw lg:w-[100vw] h-screen dark:bg-rock-blue-950">
         <FormLogin />

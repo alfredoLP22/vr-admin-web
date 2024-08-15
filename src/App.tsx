@@ -5,7 +5,7 @@ import "./App.css";
 import type { RootState } from "./app/store";
 import Login from "./login/page/Login";
 import Dashboard from "./private/pages/Dashboard/page/Dashboard";
-import RouteProtected from "./private/Layout/RouteProtected";
+import RouteProtected from "./private/layout/RouteProtected";
 import Privates from "./private/pages/Privates/page/Privates";
 import MyPayments from "./private/pages/MyPayments/page/MyPayments";
 import Residents from "./private/pages/Residents/page/Residents";
