@@ -13,3 +13,17 @@ export interface UserState {
   darkMode: boolean;
   sessionUser: User
 }
+
+export type InputLogin = {
+  email: string;
+  password: string;
+}
+
+export type InputResetPassword = {
+  confirmPassword: string;
+  password: string;
+}
+
+export type InputForgotPassword = {
+  email: string;
+}

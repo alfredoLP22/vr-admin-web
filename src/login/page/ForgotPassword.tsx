@@ -1,18 +1,16 @@
 import React from "react";
-import "../styles/login.css";
-import FormLogin from "../components/FormLogin";
 import BackGround from "../components/BackGround";
+import FormChangePassword from "../components/FormChangePassword";
 
-const Login: React.FC = () => {
-
+const ForgotPassword: React.FC = () => {
   return (
-    <div className="container-login flex-col md:flex">
+    <div className="container-login md:flex">
       <BackGround />
       <div className="md:w-4/4 w-100-vw lg:w-[100vw] h-screen dark:bg-rock-blue-950">
-        <FormLogin />
+        <FormChangePassword />
       </div>
     </div>
   );
 };
 
-export default Login;
+export default ForgotPassword;

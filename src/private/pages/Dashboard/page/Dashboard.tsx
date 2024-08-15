@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   AreaChart,
   Area,
@@ -8,6 +8,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import TitleSection from "../../../common/components/TitleSection";
 
 const data = [
   {
@@ -88,7 +89,7 @@ const dataEgresos = [
   { mes: "Febrero", año: 2024, egreso: 700 },
 ];
 
-const Dashboard = () => {
+const Dashboard: React.FC = () => {
   const [type, setType] = useState("");
 
   const handleOnChangeTYpe = (event: React.ChangeEvent<HTMLSelectElement>) => {
@@ -99,10 +100,7 @@ const Dashboard = () => {
     <section className="w-10/12 mx-auto mt-5 flex flex-col flex-wrap gap-7 py-2 px-0 overflow-x-hidden">
       <div>
         <div className="p-3 flex items-center gap-2 justify-start">
-          <span className="w-3 h-3 bg-zuccini-950 rounded-full ring-2 ring-viridian-green-400"></span>
-          <h3 className="font-bold text-2xl text-rock-blue-900 dark:text-viridian-green-50">
-            Inicio
-          </h3>
+          <TitleSection title="Inicio" />
         </div>
       </div>
       <div className="flex flex-col md:flex-row flex-wrap justify-around items-center">

@@ -2,9 +2,9 @@ import { useEffect } from "react";
 import { Avatar, Popover } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import Logout from "./Logout";
-import type { RootState } from "../../app/store";
-import "../../index.css";
-import { setDarkMode } from "../../features/user/userSlice";
+import type { RootState } from "../../../app/store";
+import "../../../index.css";
+import { setDarkMode } from "../../../features/user/userSlice";
 
 const Header = () => {
   const userDispatch = useDispatch();

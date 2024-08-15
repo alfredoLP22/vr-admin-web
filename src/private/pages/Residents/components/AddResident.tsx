@@ -20,11 +20,11 @@ const AddResident: React.FC<AddResidentProps> = ({
     formState: { errors, isSubmitting, isValid },
   } = useForm<InputsResident>({
     resolver: yupResolver(schemaResident),
+    mode: "onBlur",
   });
 
   const onSubmit: SubmitHandler<InputsResident> = (data) => {
     console.log(data);
-    // Aquí puedes manejar el envío del formulario
   };
 
   return (
@@ -114,7 +114,7 @@ const AddResident: React.FC<AddResidentProps> = ({
                     : "border-viridian-green-200"
                 }`}
               >
-                <option disabled value="" selected>
+                <option disabled defaultValue={""}>
                   -- Selecciona --
                 </option>
                 <option value="valle_oriental">Valle oriental</option>
@@ -135,7 +135,7 @@ const AddResident: React.FC<AddResidentProps> = ({
               </label>
               <input
                 id="numberOfHouse"
-                type="number"
+                type="text"
                 min={1}
                 placeholder="10"
                 autoComplete="address-level2"

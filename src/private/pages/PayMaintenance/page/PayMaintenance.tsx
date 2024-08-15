@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import TitleSection from "../../../common/components/TitleSection";
 
-const PayMaintenance = () => {
+const PayMaintenance: React.FC = () => {
   const [isMultiPeriod, setIsMultiPeriod] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -17,10 +18,7 @@ const PayMaintenance = () => {
   return (
     <section className="w-10/12 mx-auto mt-5 flex flex-col flex-wrap gap-7 py-2 px-0 overflow-x-hidden">
       <div className="p-2 flex items-center gap-2 justify-start">
-        <span className="w-3 h-3 bg-zuccini-950 rounded-full ring-2 ring-viridian-green-400"></span>
-        <h3 className="font-bold text-2xl text-rock-blue-900 dark:text-viridian-green-50">
-          Pagar mantenimiento
-        </h3>
+        <TitleSection title="Pagar mantenimiento" />
       </div>
       <form className="w-9/12 mx-auto py-2 overflow-x-hidden">
         <div className="p-3">
@@ -81,7 +79,8 @@ const PayMaintenance = () => {
                 htmlFor="count-months"
                 className="p-1 dark:text-viridian-green-50"
               >
-                Cantidad de meses a pagar <span className="text-roman-500 text-lg">*</span>
+                Cantidad de meses a pagar{" "}
+                <span className="text-roman-500 text-lg">*</span>
               </label>
               <select
                 name="count-months"
@@ -125,7 +124,8 @@ const PayMaintenance = () => {
                 htmlFor="start-month"
                 className="p-1 dark:text-viridian-green-50"
               >
-                Periodo {isMultiPeriod && "inicial"} <span className="text-roman-500 text-lg">*</span>
+                Periodo {isMultiPeriod && "inicial"}{" "}
+                <span className="text-roman-500 text-lg">*</span>
               </label>
               <input
                 id="start-month"
@@ -140,7 +140,8 @@ const PayMaintenance = () => {
                   htmlFor="end-month"
                   className="p-1 dark:text-viridian-green-50"
                 >
-                  Periodo final <span className="text-roman-500 text-lg">*</span>
+                  Periodo final{" "}
+                  <span className="text-roman-500 text-lg">*</span>
                 </label>
                 <input
                   id="end-month"
@@ -221,7 +222,8 @@ const PayMaintenance = () => {
                 htmlFor="expiration"
                 className="p-1 dark:text-viridian-green-50"
               >
-                Fecha expiracion <span className="text-roman-500 text-lg">*</span>
+                Fecha expiracion{" "}
+                <span className="text-roman-500 text-lg">*</span>
               </label>
               <input
                 id="expiration"

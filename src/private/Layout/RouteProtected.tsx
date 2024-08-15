@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Sidebar from "../common/components/Sidebar";
+import Header from "../common/components/Header";
+import Footer from "../common/components/Footer";
 
 const RouteProtected = () => {
   return (

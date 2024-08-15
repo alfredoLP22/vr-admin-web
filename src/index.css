@@ -37,3 +37,12 @@ html.dark .ant-popover-inner, html.dark .ant-popover-arrow:before {
     background: #088d53;
     border-radius: .6rem;
 }
+
+.ellipsis-multiline {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.5em;
+  }
